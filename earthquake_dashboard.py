@@ -67,6 +67,9 @@ def load_data(url):
         # Convert time from ms since epoch to readable UTC datetime
         df["date"] = pd.to_datetime(df["time"], unit="ms")
 
+        # Create a string column for tooltips
+        df["date_str"] = df["date"].dt.strftime("%Y-%m-%d %H:%M:%S UTC")
+
         # Filter invalid magnitudes
         df = df[df["mag"].notnull()]
         df = df[df["mag"] > 0]
@@ -141,7 +144,7 @@ if not df.empty:
             "html": "<b>{place}</b><br/>"
                     "Magnitude: {mag}<br/>"
                     "Depth: {depth} km<br/>"
-                    "Date (UTC): {date}",
+                    "Date (UTC): {date_str}",
             "style": {"backgroundColor": "steelblue", "color": "white"}
         },
     )
