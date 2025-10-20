@@ -12,8 +12,10 @@ st.title("🌎 Real-Time Earthquake Dashboard")
 
 st.markdown(
     """
-This dashboard visualizes recent global earthquake activity using **USGS real-time data**.  
+This dashboard visualizes recent global earthquake activity using **USGS real-time data**.
+
 On mobile: Press the Arrow button on the top left to search for earthquakes.
+
 On mobile: **tap or hold the yellow line** to view the earthquake’s information.
 
 > **Note:** All earthquake times are displayed in **UTC**,  
