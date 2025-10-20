@@ -1,9 +1,29 @@
-# Ignore virtual environment
-venv/
-
-# Ignore environment variables
-.env
-
-# Ignore Python cache
+# Python
 __pycache__/
+*.py[cod]
+*.pyo
+*.pyd
 *.pyc
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+env/
+*.env
+
+# Streamlit
+.streamlit/
+
+# Jupyter Notebook checkpoints (if any)
+.ipynb_checkpoints/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE / editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
